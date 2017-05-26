@@ -77,7 +77,24 @@ function spotifysong() {
 
 function movieinfo() {
 	console.log("Movie Info");
+//http://www.omdbapi.com/?t=star+wars&y=&plot=short&r=json&apikey=b16fa115
+request("http://www.omdbapi.com/?t="+searchRequest+"&apikey=b16fa115", function(error, response, body) {
 
+  if (!error && response.statusCode === 200) {
+    var title=JSON.parse(body).Title;
+    var year=JSON.parse(body).Year;
+    var IMDBRating=JSON.parse(body).imdbRating; 
+    var country=JSON.parse(body).Country;
+    var language=JSON.parse(body).Language;
+    var plot=JSON.parse(body).Plot;
+    var actors=JSON.parse(body).Actors;
+    console.log("Title: "+title + "\n Year: " + year + "\n IMDBRating: " + IMDBRating+ "\n Country: " +country+ "\n Language: " +language+ "\n Plot: " +plot+ "\n Actors: " +actors);
+    console.log("The movie's rating is: " + JSON.parse(body).imdbRating);
+  }
+  else if (error) {
+    console.log(error);
+  }
+});
 }
 
 function doit() {
