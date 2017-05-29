@@ -1,0 +1,41 @@
+
+ --------------Last 20 Tweets-------------- 
+ Tweet----- Never sent this many tweets in a day.... ----- Tweeted at: Mon May 29 00:05:15 +0000 2017
+ Tweet----- Getting ready to grill some steaks pre-Memorial Day complex grill rush! ----- Tweeted at: Mon May 29 00:04:26 +0000 2017
+ Tweet----- No class for a week! Glad for the holiday break! ----- Tweeted at: Mon May 29 00:03:32 +0000 2017
+ Tweet----- Happy Memorial Day 2017! ----- Tweeted at: Mon May 29 00:03:01 +0000 2017
+ Tweet----- Confirmed email, I'm now open to the world! ----- Tweeted at: Tue May 23 18:39:17 +0000 2017
+ Tweet----- Setting up account for some classwork and connectivity to the world! ----- Tweeted at: Tue May 23 18:35:41 +0000 2017
+ --------------Song Lookup-------------- 
+ Artist: Angels & Airwaves
+ Song Name: We Don't Need To Whisper
+ Preview Link: null
+ Album Name: The Adventure
+ --------------Movie Lookup-------------- 
+ Title: How to Train Your Dragon
+ Year: 2010
+ IMDBRating: 8.2
+ Country: USA
+ Language: English
+ Plot: A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself, and learns there may be more to the creatures than he assumed.
+ Actors: Jay Baruchel, Gerard Butler, Craig Ferguson, America Ferrera
+ Rotten Tomato's URL: No Longer Available
+ --------------Song Lookup-------------- 
+ Artist: Backstreet Boys
+ Song Name: The Hits--Chapter One
+ Preview Link: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=null
+ Album Name: I Want It That Way
+ --------------Movie Lookup-------------- 
+ Title: Mr. Nobody
+ Year: 2009
+ IMDBRating: 7.9
+ Country: Belgium, Germany, Canada, France, USA, UK
+ Language: English, Mohawk
+ Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+ Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+ Rotten Tomato's URL: No Longer Available
+ --------------Song Lookup-------------- 
+ Artist: Ace of Base
+ Song Name: The Sign (US Album) [Remastered]
+ Preview Link: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=null
+ Album Name: The Sign
