@@ -77,10 +77,15 @@ function spotifysong() {
 
 function movieinfo() {
 	console.log("Movie Info");
+  if (searchRequest==null) {
+    searchRequest="mr+nobody";
+  }
 //http://www.omdbapi.com/?t=star+wars&y=&plot=short&r=json&apikey=b16fa115
-request("http://www.omdbapi.com/?t="+searchRequest+"&apikey=b16fa115", function(error, response, body) {
-
+//request("http://www.omdbapi.com/?t="+searchRequest+"&apikey=b16fa115", function(error, response, body) {
+request("https://www.omdbapi.com/?t="+searchRequest+"&apikey=b16fa115", function(error, response, body) {
   if (!error && response.statusCode === 200) {
+    console.log("Search Request: "+searchRequest);
+    console.log(body);
     var title=JSON.parse(body).Title;
     var year=JSON.parse(body).Year;
     var IMDBRating=JSON.parse(body).imdbRating; 
