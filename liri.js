@@ -35,13 +35,22 @@ var client = new Twitter({
   access_token_key: accessTokenKey,
   access_token_secret: accessTokenSecret
 });
-console.log("Client keys"+client);
 var params = {screen_name: 'jldoucette_bcs',
 count:20};
 client.get('statuses/user_timeline', params, function(error, tweets, response) {
   if (!error) {
+     var logEntry="\n --------------Last 20 Tweets-------------- "
+    fs.appendFile("log.txt",logEntry,function(err) {
+     if (err){console.log(err);
+     }  
+  });
     for (i=0;i<tweets.length;i++){
     console.log("Tweet: "+tweets[i].text+" Tweeted at: "+tweets[i].created_at);
+      var logEntry="\n Tweet----- "+tweets[i].text+" ----- Tweeted at: "+tweets[i].created_at
+    fs.appendFile("log.txt",logEntry,function(err) {
+     if (err){console.log(err);
+     }  
+  });
     }
   }
   else if (error) {
@@ -70,7 +79,13 @@ function spotifysong() {
             console.log("Artist: " +artistName);
             console.log("Song Name: "+songName);
             console.log("Preview Link: "+previewLink);
-        	console.log("Album Name: "+albumName);
+        	  console.log("Album Name: "+albumName);
+             var logEntry="\n --------------Song Lookup-------------- \n Artist: "+
+             artistName + "\n Song Name: " + songName + "\n Preview Link: " + previewLink+ "\n Album Name: " +albumName
+    fs.appendFile("log.txt",logEntry,function(err) {
+     if (err){console.log(err);
+     }  
+  });
         }
 });
 }
@@ -80,12 +95,9 @@ function movieinfo() {
   if (searchRequest==null) {
     searchRequest="mr+nobody";
   }
-//http://www.omdbapi.com/?t=star+wars&y=&plot=short&r=json&apikey=b16fa115
-//request("http://www.omdbapi.com/?t="+searchRequest+"&apikey=b16fa115", function(error, response, body) {
+
 request("https://www.omdbapi.com/?t="+searchRequest+"&apikey=b16fa115", function(error, response, body) {
   if (!error && response.statusCode === 200) {
-    console.log("Search Request: "+searchRequest);
-    console.log(body);
     var title=JSON.parse(body).Title;
     var year=JSON.parse(body).Year;
     var IMDBRating=JSON.parse(body).imdbRating; 
@@ -93,8 +105,19 @@ request("https://www.omdbapi.com/?t="+searchRequest+"&apikey=b16fa115", function
     var language=JSON.parse(body).Language;
     var plot=JSON.parse(body).Plot;
     var actors=JSON.parse(body).Actors;
-    console.log("Title: "+title + "\n Year: " + year + "\n IMDBRating: " + IMDBRating+ "\n Country: " +country+ "\n Language: " +language+ "\n Plot: " +plot+ "\n Actors: " +actors);
+    console.log("Title: "+title + "\n Year: " + year + "\n IMDBRating: " + 
+    IMDBRating+ "\n Country: " +country+ "\n Language: " +
+    language+ "\n Plot: " +plot+ "\n Actors: " +
+    actors+"\n Rotten Tomato's URL: No Longer Available");
     console.log("The movie's rating is: " + JSON.parse(body).imdbRating);
+    var logEntry="\n --------------Movie Lookup-------------- \n Title: "+
+    title + "\n Year: " + year + "\n IMDBRating: " + IMDBRating+ "\n Country: " +
+    country+ "\n Language: " +language+ "\n Plot: " +
+    plot+ "\n Actors: " +actors+"\n Rotten Tomato's URL: No Longer Available"
+    fs.appendFile("log.txt",logEntry,function(err) {
+     if (err){console.log(err);
+     }  
+  });
   }
   else if (error) {
     console.log(error);
@@ -110,16 +133,9 @@ fs.readFile('random.txt', "utf8", function(err, data) {
   }
   else {
     var randomArr=data.split(',');
-    console.log("randomArr "+randomArr);
     inputRequest=randomArr[0];
     searchRequest=randomArr[1];
-    console.log("New inputRequest: "+inputRequest);
-    console.log("New searchRequest: "+searchRequest);
-    console.log("Random.txt data: "+data);
     processInput();
-
 }
-  
-
 });
 }
